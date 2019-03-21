@@ -23,8 +23,8 @@ def create_data():
         label = label_img(img)
         path = os.path.join(DATA,img)
         img = cv2.imread(path, cv2.IMREAD_GRAYSCALE, (IMG_SIZE,IMG_SIZE))
-        training_data.append([np.array(img), np.array(label)])
-        shuffle(training_data)
+        data.append([np.array(img), np.array(label)])
+        shuffle(data)
         np.save('data.npy', data)
         return data
         
